@@ -2,8 +2,8 @@
 
 Extension for Moq that allow to easily mock async methods
 
-[![Version](https://img.shields.io/nuget/v/Moq.SetupAsync.svg)](https://www.nuget.org/packages/Moq.SetupAsync)
-[![Downloads](https://img.shields.io/nuget/dt/Moq.SetupAsync.svg)](https://www.nuget.org/packages/Moq.SetupAsync)
+[![Version](https://img.shields.io/nuget/v/Talentsoft.Moq.SetupAsync.svg)](https://www.nuget.org/packages/Talentsoft.Moq.SetupAsync)
+[![Downloads](https://img.shields.io/nuget/dt/Talentsoft.Moq.SetupAsync.svg)](https://www.nuget.org/packages/Talentsoft.Moq.SetupAsync)
 
 ```csharp
   var mock = new Mock<IFoo>();
