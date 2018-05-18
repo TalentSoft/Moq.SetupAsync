@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Moq.SetupAsync.Tests
 {
-    public class CallbackAsyncFixture
+    public class SetupAsyncActionFixture
     {
         [Fact]
         public void SetupAsyncActionIsWaitable()
@@ -89,6 +89,17 @@ namespace Moq.SetupAsync.Tests
             mock.Object.DoActionAsync("any string").Wait();
 
             Assert.True(isCalled);
+        }
+
+        [Fact]
+        public void SetupAsyncActionWithThrows()
+        {
+            var mock = new Mock<IFoo>();
+
+            mock.SetupAsync(x => x.DoActionAsync()).Throws<ArgumentException>();
+            var task = mock.Object.DoActionAsync();
+
+            Assert.ThrowsAsync<ArgumentException>(() => task).Wait();
         }
 
         public interface IFoo

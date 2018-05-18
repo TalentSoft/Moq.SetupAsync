@@ -52,7 +52,7 @@
         public IVerifies Throws<TException>()
             where TException : Exception, new()
         {
-            return this.Setup.ThrowsAsync(new TException());
+            return this.Throws(new TException());
         }
 
         public void Verifiable()
@@ -114,13 +114,13 @@
 
         public IVerifies Throws(Exception exception)
         {
-            return this.Setup.Throws(exception);
+            return this.Setup.ThrowsAsync(exception);
         }
 
         public IVerifies Throws<TException>()
             where TException : Exception, new()
         {
-            return this.Setup.Throws(new TException());
+            return this.Throws(new TException());
         }
 
         public void Verifiable()
