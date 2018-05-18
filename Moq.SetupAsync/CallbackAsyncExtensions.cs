@@ -39,6 +39,9 @@ namespace Moq
                 });
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public static IReturnsResult<TMock> CallbackAsync<T1, T2, TMock>(
             this IReturns<TMock, Task> mock,
             Action<T1, T2> callback)
@@ -52,6 +55,9 @@ namespace Moq
                 });
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public static IReturnsResult<TMock> CallbackAsync<T1, T2, T3, TMock>(
             this IReturns<TMock, Task> mock,
             Action<T1, T2, T3> callback)
@@ -65,6 +71,9 @@ namespace Moq
                 });
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public static IReturnsResult<TMock> CallbackAsync<T1, T2, T3, T4, TMock>(
             this IReturns<TMock, Task> mock,
             Action<T1, T2, T3, T4> callback)
@@ -78,6 +87,9 @@ namespace Moq
                 });
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public static IReturnsResult<TMock> CallbackAsync<T1, T2, T3, T4, T5, TMock>(
             this IReturns<TMock, Task> mock,
             Action<T1, T2, T3, T4, T5> callback)

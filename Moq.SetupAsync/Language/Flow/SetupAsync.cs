@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
 namespace Moq.Language.Flow
@@ -24,21 +25,33 @@ namespace Moq.Language.Flow
             return this.Setup.CallbackAsync(callback);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Callback<TArg1, TArg2>(Action<TArg1, TArg2> callback)
         {
             return this.Setup.CallbackAsync(callback);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Callback<TArg1, TArg2, TArg3>(Action<TArg1, TArg2, TArg3> callback)
         {
             return this.Setup.CallbackAsync(callback);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Callback<TArg1, TArg2, TArg3, TArg4>(Action<TArg1, TArg2, TArg3, TArg4> callback)
         {
             return this.Setup.CallbackAsync(callback);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5>(Action<TArg1, TArg2, TArg3, TArg4, TArg5> callback)
         {
             return this.Setup.CallbackAsync(callback);
@@ -92,21 +105,33 @@ namespace Moq.Language.Flow
             return this.Setup.ReturnsAsync(valueFunction);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Returns<TArg1, TArg2>(Func<TArg1, TArg2, TResult> valueFunction)
         {
             return this.Setup.ReturnsAsync(valueFunction);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Returns<TArg1, TArg2, TArg3>(Func<TArg1, TArg2, TArg3, TResult> valueFunction)
         {
             return this.Setup.ReturnsAsync(valueFunction);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Returns<TArg1, TArg2, TArg3, TArg4>(Func<TArg1, TArg2, TArg3, TArg4, TResult> valueFunction)
         {
             return this.Setup.ReturnsAsync(valueFunction);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
         public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TResult> valueFunction)
         {
             return this.Setup.ReturnsAsync(valueFunction);
