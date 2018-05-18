@@ -24,5 +24,5 @@ Extension for Moq that allow to easily mock async methods
 All that work has been inspired  first by that discussion on stackoverflow:
 https://stackoverflow.com/questions/21253523/setup-async-task-callback-in-moq-framework
 
-And then we have been conforted into our direction when we read that opened issue which unfortunatly seems a nit freezed:
+And then we have been comforted into our direction when we read that opened issue which unfortunately seems a bit freeze:
 https://github.com/moq/moq4/issues/384
