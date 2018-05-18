@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0</Version>
     <Authors>Mickaël Nivet</Authors>
-    <owners>Mickaël Nivet, Talentsoft</owners>
+    <Company>Talentsoft</Company>
     <Description>Extension for Moq that allow to easily mock async methods</Description>
     <PackageProjectUrl>https://github.com/TalentSoft/Moq.SetupAsync</PackageProjectUrl>
     <PackageTags>moq async task</PackageTags>
