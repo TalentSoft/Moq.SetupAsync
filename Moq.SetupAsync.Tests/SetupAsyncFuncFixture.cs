@@ -74,7 +74,7 @@ namespace Moq.SetupAsync.Tests
         }
 
         [Fact]
-        public void SetupAsyncFuncWithReturns()
+        public void SetupAsyncFuncWithStaticReturns()
         {
             var mock = new Mock<IFoo>();
             mock.SetupAsync(x => x.ExecFuncAsync()).Returns("custom return");
@@ -83,7 +83,22 @@ namespace Moq.SetupAsync.Tests
         }
 
         [Fact]
-        public void SetupAsyncFuncWithOneArgWithReturns()
+        public void SetupAsyncFuncWithComputedReturns()
+        {
+            var mock = new Mock<IFoo>();
+            var isCalled = false;
+            mock.SetupAsync(x => x.ExecFuncAsync()).Returns(() =>
+            {
+                isCalled = true;
+                return "custom return";
+            });
+
+            Assert.Equal("custom return", mock.Object.ExecFuncAsync().Result);
+            Assert.True(isCalled);
+        }
+
+        [Fact]
+        public void SetupAsyncFuncWithOneArgWithReturnsThatDependsOnArg()
         {
             var mock = new Mock<IFoo>();
             mock.SetupAsync(x => x.ExecFuncAsync(It.IsAny<string>())).Returns<string>(s => "hello " + s);
