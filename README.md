@@ -1,0 +1,28 @@
+# moq.SetupAsync
+
+Extension for Moq that allow to easily mock async methods
+
+[![Version](https://img.shields.io/nuget/v/Moq.SetupAsync.svg)](https://www.nuget.org/packages/Moq.SetupAsync)
+[![Downloads](https://img.shields.io/nuget/dt/Moq.SetupAsync.svg)](https://www.nuget.org/packages/Moq.SetupAsync)
+
+```csharp
+  var mock = new Mock<IFoo>();
+
+  // Setup of async function is as simple as doing it for standard function
+  mock.SetupAsync(x => x.ExecFuncAsync(It.IsAny<string>())).Returns<string>(s => "hello " + s);
+  // In particular compared to the syntax provided by Moq
+  mock.Setup(x => x.ExecFuncAsync(It.IsAny<string>())).ReturnsAsync<string, IFoo, object>(s => "hello " + s);
+
+  // And we also provide support of async actions (task without return value), which are missing in Moq
+  mock.SetupAsync(x => x.DoActionAsync());
+  // With the possibility to add callback on them
+  mock.SetupAsync(x => x.DoActionAsync(It.IsAny<string>())).Callback<string>(s => { });
+  // But if you stick to the Setup syntax instead of the SetupAsync you can also use our new CallbackAsync extension
+  mock.Setup(x => x.DoActionAsync(It.IsAny<string>())).CallbackAsync<string, IFoo>(s => {});
+```
+
+All that work has been inspired  first by that discussion on stackoverflow:
+https://stackoverflow.com/questions/21253523/setup-async-task-callback-in-moq-framework
+
+And then we have been conforted into our direction when we read that opened issue which unfortunatly seems a nit freezed:
+https://github.com/moq/moq4/issues/384
