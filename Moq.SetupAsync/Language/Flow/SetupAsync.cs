@@ -57,6 +57,94 @@ namespace Moq.Language.Flow
             return this.Setup.CallbackAsync(callback);
         }
 
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Callback<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15, TArg16>(Action<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15, TArg16> callback)
+        {
+            return this.Setup.CallbackAsync(callback);
+        }
+
         public IVerifies Throws(Exception exception)
         {
             return this.Setup.ThrowsAsync(exception);
@@ -133,6 +221,86 @@ namespace Moq.Language.Flow
         [ExcludeFromCodeCoverage]
 #endif
         public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TResult> valueFunction)
+        {
+            return this.Setup.ReturnsAsync(valueFunction);
+        }
+
+#if !NETSTANDARD1_3 && DEBUG
+        [ExcludeFromCodeCoverage]
+#endif
+        public IVerifies Returns<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15>(Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15, TResult> valueFunction)
         {
             return this.Setup.ReturnsAsync(valueFunction);
         }
