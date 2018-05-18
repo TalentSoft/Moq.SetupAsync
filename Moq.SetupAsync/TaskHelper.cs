@@ -1,7 +1,7 @@
-﻿namespace Moq
-{
-    using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
+namespace Moq
+{
     internal static class TaskHelper
     {
         public static Task CompletedTask

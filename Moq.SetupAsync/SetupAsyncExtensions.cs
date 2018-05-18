@@ -1,11 +1,11 @@
-﻿namespace Moq
+﻿using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+using Moq.Language.Flow;
+
+namespace Moq
 {
-    using System;
-    using System.Linq.Expressions;
-    using System.Threading.Tasks;
-
-    using Moq.Language.Flow;
-
     public static class SetupAsyncExtensions
     {
         public static ISetupAsync SetupAsync<TMock>(this Mock<TMock> mock, Expression<Func<TMock, Task>> expression)

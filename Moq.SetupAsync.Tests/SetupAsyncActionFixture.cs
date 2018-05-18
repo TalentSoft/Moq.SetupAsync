@@ -10,8 +10,8 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionIsWaitable()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync());
+
             mock.Object.DoActionAsync().Wait();
 
             mock.VerifyAll();
@@ -21,8 +21,8 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionWithOneArgIsWaitable()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync(It.IsAny<string>()));
+
             mock.Object.DoActionAsync("any string").Wait();
 
             mock.VerifyAll();
@@ -32,7 +32,6 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionIsVerifiable()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync()).Verifiable();
             mock.Verify(x => x.DoActionAsync(), Times.Never);
 
@@ -46,7 +45,6 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionWithOneArgIsVerifiable()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync(It.IsAny<string>())).Verifiable();
             mock.Verify(x => x.DoActionAsync("any string"), Times.Never);
 
@@ -60,7 +58,6 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionIsVerifiableAndErrorMessageCanBeSpecified()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync()).Verifiable("custom fail message");
 
             var exception = Assert.Throws<MockException>(() => mock.Verify());
@@ -72,8 +69,8 @@ namespace Moq.SetupAsync.Tests
         {
             var mock = new Mock<IFoo>();
             var isCalled = false;
-
             mock.SetupAsync(x => x.DoActionAsync()).Callback(() => isCalled = true);
+
             mock.Object.DoActionAsync().Wait();
 
             Assert.True(isCalled);
@@ -84,8 +81,8 @@ namespace Moq.SetupAsync.Tests
         {
             var mock = new Mock<IFoo>();
             var isCalled = false;
-
             mock.SetupAsync(x => x.DoActionAsync(It.IsAny<string>())).Callback<string>(s => isCalled = s == "any string");
+
             mock.Object.DoActionAsync("any string").Wait();
 
             Assert.True(isCalled);
@@ -95,7 +92,6 @@ namespace Moq.SetupAsync.Tests
         public void SetupAsyncActionWithThrows()
         {
             var mock = new Mock<IFoo>();
-
             mock.SetupAsync(x => x.DoActionAsync()).Throws<ArgumentException>();
             var task = mock.Object.DoActionAsync();
 

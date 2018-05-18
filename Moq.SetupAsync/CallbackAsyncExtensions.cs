@@ -1,11 +1,12 @@
-﻿namespace Moq
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
+
+using Moq.Language;
+using Moq.Language.Flow;
+
+namespace Moq
 {
-    using System;
-    using System.Threading.Tasks;
-
-    using Moq.Language;
-    using Moq.Language.Flow;
-
     /// <summary>
     /// Class that provide a simplified way to define a callback on an async mocked action.
     /// It's inspired from that discussion: https://stackoverflow.com/questions/21253523/setup-async-task-callback-in-moq-framework

@@ -1,7 +1,7 @@
-﻿namespace Moq.Language
-{
-    using System;
+﻿using System;
 
+namespace Moq.Language
+{
     public interface ICallbackAsync
     {
         IVerifies Callback(Action callback);

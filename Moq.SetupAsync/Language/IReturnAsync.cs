@@ -1,7 +1,7 @@
-﻿namespace Moq.Language
-{
-    using System;
+﻿using System;
 
+namespace Moq.Language
+{
     public interface IReturnAsync<in TResult>
     {
         IVerifies Returns(TResult value);

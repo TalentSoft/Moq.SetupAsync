@@ -1,8 +1,8 @@
-﻿namespace Moq.Language.Flow
-{
-    using System;
-    using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
+namespace Moq.Language.Flow
+{
     public class SetupAsync<TMock> : ISetupAsync
         where TMock : class
     {
