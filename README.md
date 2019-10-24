@@ -21,8 +21,8 @@ Extension for Moq that allow to easily mock async methods
   mock.Setup(x => x.DoActionAsync(It.IsAny<string>())).CallbackAsync<string, IFoo>(s => {});
 ```
 
-All that work has been inspired  first by that discussion on stackoverflow:
+This work has been inspired in the first place by a discussion on stackoverflow:
 https://stackoverflow.com/questions/21253523/setup-async-task-callback-in-moq-framework
 
-And then we have been comforted into our direction when we read that opened issue which unfortunately seems a bit freeze:
+Then our decision has been validated when we read that there is an opened issue that seems frozen unfortunately:
 https://github.com/moq/moq4/issues/384
